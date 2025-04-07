@@ -15,14 +15,11 @@ public class ClienteController:Controller
     }
     
     [HttpGet]
-    public async Task<IActionResult> ObtenerClientes()
+    public async Task<IActionResult> GetAll()
     {
         var clientes = await _unitOfWork.Clientes.GetAll();
-    
-        if (clientes == null)
-            return NotFound("No se encontraron clientes");
 
-        return Ok(clientes.ToList());
+        return Ok(clientes);
     }
     [HttpPost]
     public async Task<IActionResult> CrearCliente(Cliente cliente)

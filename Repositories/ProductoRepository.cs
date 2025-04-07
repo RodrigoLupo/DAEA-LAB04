@@ -2,10 +2,10 @@
 
 namespace Laboratorio04_Lupo.Repositories;
 
-public class PagoRepository : GenericRepository<Pago>, IPagoRepository
+public class ProductoRepository : GenericRepository<Producto>, IProductoRepository
 {
     private readonly TiendaDbContext _context;
-    public PagoRepository(TiendaDbContext context) : base(context)
+    public ProductoRepository(TiendaDbContext context) : base(context)
     {
         _context = context;
     }

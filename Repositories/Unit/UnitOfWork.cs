@@ -6,6 +6,7 @@ public class UnitOfWork : IUnitOfWork
 {
     private readonly TiendaDbContext _context;
     public IClienteRepository Clientes { get; }
+    public IProductoRepository Productos { get; }
 
     public UnitOfWork(TiendaDbContext context, IClienteRepository clientes)
     {
