@@ -2,7 +2,7 @@
 
 namespace Laboratorio04_Lupo.Repositories;
 
-public class DetallesOrdenRepository : GenericRepository<Detallesorden>, IDetallesOrdenRepository
+public class DetallesOrdenRepository : GenericRepository<DetallesOrden>, IDetallesOrdenRepository
 {
     private readonly TiendaDbContext _context;
     public DetallesOrdenRepository(TiendaDbContext context) : base(context)

@@ -2,7 +2,6 @@
 
 namespace Laboratorio04_Lupo.Repositories;
 
-public interface IClienteRepository: IGenericRepository<Cliente>
+public interface IClienteRepository : IGenericRepository<Cliente>
 {
-    
 }

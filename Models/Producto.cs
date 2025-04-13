@@ -19,5 +19,5 @@ public partial class Producto
 
     public virtual Categoria? Categoria { get; set; }
 
-    public virtual ICollection<Detallesorden> Detallesordens { get; set; } = new List<Detallesorden>();
+    public virtual ICollection<DetallesOrden> DetallesOrdens { get; set; } = new List<DetallesOrden>();
 }

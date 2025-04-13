@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Laboratorio04_Lupo.Models;
 
-public partial class Detallesorden
+public partial class DetallesOrden
 {
     public int DetalleId { get; set; }
 

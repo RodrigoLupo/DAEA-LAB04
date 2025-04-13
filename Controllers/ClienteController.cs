@@ -1,11 +1,11 @@
 ﻿using Laboratorio04_Lupo.Models;
-using Laboratorio04_Lupo.Repositories;
+using Laboratorio04_Lupo.Repositories.Unit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Laboratorio04_Lupo.Controllers;
 [Route("api/[controller]")]
 [ApiController]
-public class ClienteController:Controller
+public class ClienteController:ControllerBase
 {
     private readonly IUnitOfWork _unitOfWork;
     
