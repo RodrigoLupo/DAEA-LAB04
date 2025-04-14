@@ -13,7 +13,14 @@ public class ClienteController:ControllerBase
     {
         _unitOfWork = unitOfWork;
     }
-    
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var cliente = await _unitOfWork.Repository<Cliente>().GetById(id);
+        return Ok(cliente);
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {

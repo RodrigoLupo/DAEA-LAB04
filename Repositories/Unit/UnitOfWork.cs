@@ -23,7 +23,10 @@ public class UnitOfWork : IUnitOfWork
         Ordenes = ordenes;
 
     }
-    
+    public IGenericRepository<T> Repository<T>() where T : class
+    {
+        return new GenericRepository<T>(_context);
+    }
     public int SaveChanges() => _context.SaveChanges();
     public void Dispose() => _context.Dispose();
     public async Task <int> SaveChangesAsync() => await _context.SaveChangesAsync();

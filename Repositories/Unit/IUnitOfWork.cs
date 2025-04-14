@@ -2,6 +2,7 @@
 
 public interface IUnitOfWork:IDisposable
 {
+    IGenericRepository<T> Repository<T>()where T : class;
     IClienteRepository Clientes { get; }
     IProductoRepository Productos { get; }
     ICategoriaRepository Categorias { get; }
